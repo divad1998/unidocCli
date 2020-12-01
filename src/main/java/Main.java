@@ -68,6 +68,6 @@ public class Main implements Runnable {
     public static void main(String[] args) {
 
         CommandLine cmd = new CommandLine(new Main());
-        cmd.execute("-d", "/home/david/doc", "/home/david/unidoc/src/test/java/TestC.java", "-private");
+        cmd.execute(args);
     }
 }
