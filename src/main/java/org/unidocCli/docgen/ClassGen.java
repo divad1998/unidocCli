@@ -55,7 +55,7 @@ public class ClassGen {
                 up.classGenParser(options, cu, privateRequested, publicRequested, packageRequested);
             } catch (FileNotFoundException ee) {
 
-                log.info("null");
+                log.info("Not a source file.");
             }
         }
     }

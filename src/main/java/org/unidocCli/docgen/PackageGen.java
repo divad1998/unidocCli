@@ -90,7 +90,7 @@ public class PackageGen {
 
                             });
                         } catch (IllegalArgumentException | IOException e) {
-                            log.info("null");
+                            log.info("Not a package. \nMight be a source file.");
                         }
 
                     }
@@ -118,7 +118,7 @@ public class PackageGen {
 
                     });
                 } catch (IllegalArgumentException | IOException e) {
-                    log.info("null");
+                    log.info("Not a package. \nMight be a source file.");
                 }
             });
         }
