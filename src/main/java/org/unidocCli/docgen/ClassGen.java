@@ -6,6 +6,7 @@ import org.unidocCli.formatter.LogSetter;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
@@ -28,7 +29,7 @@ public class ClassGen {
      * @param publicRequested whether to include only public declarations in generated doc file
      * @param packageRequested whether to include only public, protected and package declarations in generated doc file
      */
-    public void parseClass(String destination, String clazz, boolean privateRequested, boolean publicRequested, boolean packageRequested) {
+    public void parseClass(String destination, String clazz, boolean privateRequested, boolean publicRequested, boolean packageRequested) throws IOException {
 
         LogSetter logSetter = new LogSetter();
         logSetter.setLog(log);

@@ -4,6 +4,7 @@ import org.unidocCli.docgen.ClassGen;
 import org.unidocCli.docgen.PackageGen;
 import picocli.CommandLine;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -63,7 +64,11 @@ public class Main implements Runnable {
                 .filter(list -> list.endsWith(".java"))
                 .forEach(clazz -> {
                     ClassGen classGen = new ClassGen();
-                    classGen.parseClass(destination, clazz, privateRequested, publicRequested, packageRequested);
+                    try {
+                        classGen.parseClass(destination, clazz, privateRequested, publicRequested, packageRequested);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 });
     }
 

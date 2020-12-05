@@ -61,7 +61,11 @@ public class PackageGen {
 
                             options.add(sourcepath);
                             UnitParser up = new UnitParser();
-                            up.packageGenParser(options, compilationUnit, privateRequested, publicRequested, packageRequested);
+                            try {
+                                up.packageGenParser(options, compilationUnit, privateRequested, publicRequested, packageRequested);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
 
                         });
                     } catch (IllegalArgumentException | IOException iae) {
@@ -78,7 +82,11 @@ public class PackageGen {
 
                                 options.add(sourcepath);
                                 UnitParser up = new UnitParser();
-                                up.packageGenParser(options, compilationUnit, privateRequested, publicRequested, packageRequested);
+                                try {
+                                    up.packageGenParser(options, compilationUnit, privateRequested, publicRequested, packageRequested);
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
 
                             });
                         } catch (IllegalArgumentException | IOException e) {
@@ -102,7 +110,11 @@ public class PackageGen {
                     cu.stream().forEach(compilationUnit -> {
 
                         UnitParser up = new UnitParser();
-                        up.packageGenParser(options, compilationUnit, privateRequested, publicRequested, packageRequested);
+                        try {
+                            up.packageGenParser(options, compilationUnit, privateRequested, publicRequested, packageRequested);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
 
                     });
                 } catch (IllegalArgumentException | IOException e) {
