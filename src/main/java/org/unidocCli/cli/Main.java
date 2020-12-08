@@ -23,13 +23,13 @@ public class Main implements Runnable {
     /**
      * path to find packages
      */
-    @CommandLine.Option(names = { "-sourcepath", "--source-path" }, arity = "1", split = ":", splitSynopsisLabel = ":", description = "marker of src path(s)")
+    @CommandLine.Option(names = { "-sourcepath", "--source-path" }, arity = "1", split = ":", splitSynopsisLabel = ":", description = "indicates path of src path(s)")
     List<String> sourcePaths;
 
     /**
-     * package(s) to be documented
+     * takes package and sourcefile to be documented
      */
-    @CommandLine.Parameters(paramLabel = "PackageAndClass", description = "package(s) and class(es) to document")
+    @CommandLine.Parameters(paramLabel = "PackageAndSourceFile", description = "package and sourcefile to document")
     List<String> packageAndClassList;
 
     /**
@@ -75,6 +75,6 @@ public class Main implements Runnable {
     public static void main(String[] args) {
         Main m = new Main();
         CommandLine cmd = new CommandLine(m);
-        cmd.execute("-d", "/home/david/testfilesdoc", "-sourcepath", "/src/test/java", "org.testfiles");
+        cmd.execute("-d", "/home/david/testfilesdoc", "-sourcepath", "/src/test/java", "org.testfiles"); //to document files in org.testfiles
     }
 }
