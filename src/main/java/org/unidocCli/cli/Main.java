@@ -75,6 +75,6 @@ public class Main implements Runnable {
     public static void main(String[] args) {
         Main m = new Main();
         CommandLine cmd = new CommandLine(m);
-        cmd.execute("-d", "/home/david/testfilesdoc", "-sourcepath", "/src/test/java", "org.testfiles"); //to document files in org.testfiles
+        cmd.execute("-d", "/home/david/testfilesdoc", "-sourcepath", "/src/test/java", "org.testfiles"); //to document files in org.testfiles and save output at testfilesdoc folder
     }
 }
