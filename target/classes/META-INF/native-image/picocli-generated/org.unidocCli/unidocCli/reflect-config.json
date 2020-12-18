@@ -7,11 +7,12 @@
     "allPublicMethods" : true,
     "fields" : [
       { "name" : "destination" },
-      { "name" : "packageAndClassList" },
+      { "name" : "packageAndSrcFileList" },
       { "name" : "packageRequested" },
       { "name" : "privateRequested" },
       { "name" : "publicRequested" },
-      { "name" : "sourcePaths" }
+      { "name" : "sourcePaths" },
+      { "name" : "subpackages" }
     ]
   },
   {
