@@ -1,2 +1,2 @@
 # unidocCli
-cli app for generating javadoc from unidoc annotations.
+cli tool for generating javadoc from unidoc annotations.
