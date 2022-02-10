@@ -23,19 +23,19 @@ public class Main implements Runnable {
      * path to find files
      */
     @CommandLine.Option(names = {"-sourcepath", "--source-path"}, arity = "1", split = ":", splitSynopsisLabel = ":", description = "indicates path of src path(s)")
-    List<String> sourcePaths;
+    List<String> sourcePaths; //takes sourcepath values
 
     /**
      * takes package and sourcefile to be documented
      */
     @CommandLine.Parameters(paramLabel = "PackageAndSourceFile", description = "package and sourcefile to document")
-    List<String> packageAndSrcFileList;
+    List<String> packageAndSrcFileList; //takes package, for instance
 
     /**
      * package with subpackages to document or subpackage to document
      */
     @CommandLine.Option(names = {"-subpackages"}, arity = "1", split = ":", description = "identifies top-level subpackage or top-level package with subpackages")
-    List<String> subpackages;
+    List<String> subpackages; //
 
     /**
      * whether to document all declarations
@@ -74,6 +74,5 @@ public class Main implements Runnable {
         Main m = new Main();
         CommandLine cmd = new CommandLine(m);
         cmd.execute(args);
-
     }
 }

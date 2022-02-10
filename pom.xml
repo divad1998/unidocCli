@@ -7,6 +7,7 @@
     <groupId>org.unidocCli</groupId>
     <artifactId>unidocCli</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <properties>
         <java.version>11</java.version>

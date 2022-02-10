@@ -42,14 +42,14 @@ public class Generator {
         List<String> options = new ArrayList<>();
         List<File> srcFiles = new ArrayList<>();
 
-        if (!(sourcePathList == null)) {
+        if (!(sourcePathList == null)) { //it means packageAndSrcFileList isn't empty
 
             Path newDirectory = Paths.get(System.getProperty("user.home") + "/" + "unidoccc");
             Files.createDirectory(newDirectory);
 
             sourcePathList.stream().forEach(sourcepath -> {
                     try {
-                        packageAndSrcFileList.stream().forEach(resource -> {
+                        packageAndSrcFileList.stream().forEach(resource -> { //for each package in the list
 
                             String finalResource = resource.replace(".", "/");
                             Path path = Paths.get(System.getProperty("user.dir") + "/" + sourcepath + "/" + finalResource);
@@ -60,7 +60,7 @@ public class Generator {
 
                                 //probably ran from a different working directory
                                 String finalResource1 = resource.replace(".", "/");
-                                Path path1 = Paths.get(sourcepath + "/" + finalResource1);
+                                Path path1 = Paths.get(sourcepath + "/" + finalResource1); //
                                 try {
                                     ParseHandler ph = new ParseHandler();
                                     ph.handlePackage(newDirectory, finalResource1, path1); //initialFile = user/home/unidocc
