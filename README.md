@@ -1,7 +1,5 @@
-@NotInUse
-
 # unidocCli
-cli tool for generating javadoc from unidoc annotations. 
+Command-line tool for generating javadoc from unidoc annotations. 
 
 How to use at the mo? Find below:
 Step 1 -> Pull from repo
